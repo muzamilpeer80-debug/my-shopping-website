@@ -1,0 +1,1 @@
+import{r}from"./index-DtiaWPpF.js";function u(){const t=r.useRef(null),[n,o]=r.useState(!1);return r.useEffect(()=>{const s=t.current;if(!s)return;const e=new IntersectionObserver(([c])=>{c.isIntersecting&&(o(!0),e.disconnect())},{threshold:.12,rootMargin:"0px 0px -60px 0px"});return e.observe(s),()=>e.disconnect()},[]),{ref:t,visible:n}}export{u};

@@ -1,0 +1,91 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        ink: {
+          50: '#f6f6f4',
+          100: '#ececea',
+          200: '#d4d4d0',
+          300: '#a8a8a2',
+          400: '#7a7a73',
+          500: '#52524c',
+          600: '#3a3a35',
+          700: '#262622',
+          800: '#171714',
+          900: '#0c0c0a',
+          950: '#050504',
+        },
+        ivory: {
+          50: '#fdfdfb',
+          100: '#f8f7f2',
+          200: '#f0eee6',
+          300: '#e3dfd2',
+          400: '#cfc8b5',
+          500: '#b8af97',
+        },
+        beige: {
+          50: '#faf8f3',
+          100: '#f3efe4',
+          200: '#e8e1d0',
+          300: '#d6cab2',
+          400: '#c2b394',
+          500: '#a89876',
+        },
+        silver: {
+          100: '#eef0f2',
+          200: '#dfe3e8',
+          300: '#c5ccd4',
+          400: '#9aa6b3',
+          500: '#6e7c8c',
+        },
+        accent: {
+          DEFAULT: '#b8a06a',
+          dark: '#9a8552',
+          light: '#d4c39a',
+        },
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        '8xl': '6.5rem',
+        '9xl': '9rem',
+        '10xl': '12rem',
+      },
+      letterSpacing: {
+        'ultra': '0.3em',
+        'mega': '0.5em',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'fade-up': 'fadeUp 0.7s ease-out forwards',
+        'fade-down': 'fadeDown 0.7s ease-out forwards',
+        'slide-up': 'slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'slide-in': 'slideIn 0.4s ease-out forwards',
+        'scale-in': 'scaleIn 0.4s ease-out forwards',
+        'shimmer': 'shimmer 2s linear infinite',
+        'marquee': 'marquee 30s linear infinite',
+        'draw': 'draw 1.2s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: { from: { opacity: '0' }, to: { opacity: '1' } },
+        fadeUp: { from: { opacity: '0', transform: 'translateY(30px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+        fadeDown: { from: { opacity: '0', transform: 'translateY(-20px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+        slideUp: { from: { transform: 'translateY(100%)' }, to: { transform: 'translateY(0)' } },
+        slideIn: { from: { transform: 'translateX(100%)' }, to: { transform: 'translateX(0)' } },
+        scaleIn: { from: { opacity: '0', transform: 'scale(0.95)' }, to: { opacity: '1', transform: 'scale(1)' } },
+        shimmer: { '0%': { backgroundPosition: '-1000px 0' }, '100%': { backgroundPosition: '1000px 0' } },
+        marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+        draw: { from: { strokeDashoffset: '1000' }, to: { strokeDashoffset: '0' } },
+      },
+      transitionTimingFunction: {
+        'lux': 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
+    },
+  },
+  plugins: [],
+};
